@@ -23,11 +23,11 @@ function Users({selectUser}) {
 
   return(
     <div className="flex flex-wrap items-center pb-16">
-      {data.users.map(user => {
+      {data.users.map(user => (
         <div key={user.id} className="lg:w-1/3 w-full p-4 text-center inline" onClick={selectUser.bind(this, user)}>
           <UserAvatar user={user} />
         </div>
-      })}
+      ))}
     </div>
   )
 }
